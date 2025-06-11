@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/purple_500"
+    android:id="@+id/standard_layout">
+
+    <ImageView
+        android:id="@+id/standard_left"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/standard_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/standard_right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/todo" />
+
+</LinearLayout>

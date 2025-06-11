@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/standard_title"/>
+        <TextView
+            android:layout_margin="@dimen/standard_interval"
+            android:id="@+id/current_answer"
+            android:layout_marginStart="@dimen/standard_interval"
+            android:layout_marginEnd="@dimen/standard_interval"
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="@dimen/standard_interval"
+            android:id="@+id/proper_answer"
+            android:layout_marginStart="@dimen/standard_interval"
+            android:layout_marginEnd="@dimen/standard_interval"
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="@dimen/standard_interval"
+            android:layout_marginStart="@dimen/standard_interval"
+            android:layout_marginEnd="@dimen/standard_interval"
+            android:text="@{title}"
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioGroup
+                    style="@style/StandardMargin"
+                    android:id="@+id/old_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/old_options_many"
+                    style="@style/StandardMargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_analysis"
+            style="@style/StandardMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_analysis"/>
+    </LinearLayout>
+</layout>

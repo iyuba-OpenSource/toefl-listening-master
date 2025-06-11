@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/toefl"
+        android:icon="@drawable/toefl"
+        android:title="@string/toefl" />
+
+
+    <item
+        android:id="@+id/break_through"
+        android:icon="@drawable/icon_break_through"
+        android:title="@string/break_through" />
+
+    <!--    飞雷神-->
+    <item
+        android:id="@+id/micro_lesson"
+        android:icon="@drawable/micro_lesson"
+        android:title="@string/micro_lesson" />
+    <item
+        android:id="@+id/small_video"
+        android:icon="@drawable/small_video"
+        android:title="@string/small_video" />
+    <item
+        android:id="@+id/mine"
+        android:icon="@drawable/mine"
+        android:title="@string/mine" />
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_files"
+        path="." />
+
+    <external-path
+        name="files_root"
+        path="Android/data/com.ai.voaspeed/files/appUpdate/" />
+
+    <!-- by sina sdk -->
+    <external-files-path
+        name="share_files"
+        path="." />
+
+</paths>

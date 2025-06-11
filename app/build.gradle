@@ -1,0 +1,366 @@
+import java.text.SimpleDateFormat
+
+static def releaseTime() {
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    return formatter.format(new Date())
+}
+
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'com.mob.sdk'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\10439\\Desktop\\资料\\iyuba_android.keystore')
+            storePassword 'buaaiyuba'
+            keyAlias 'android.keystore'
+            keyPassword 'buaaiyuba'
+        }
+        release {
+            storeFile file('C:\\Users\\10439\\Desktop\\资料\\iyuba_android.keystore')
+            storePassword 'buaaiyuba'
+            keyAlias 'android.keystore'
+            keyPassword 'buaaiyuba'
+        }
+    }
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.iyuba.toelflistening"
+        minSdk 21
+        targetSdk 32
+        versionCode 337
+        versionName "3.7.2450"
+
+        //处理不展示广告的问题
+        buildConfigField("long", "AD_TIME", "1703471460000")//单位毫秒
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        ndk {
+            moduleName "Hello"          //生成的so名字
+//            abiFilters 'arm64-v8a', 'x86_64',"armeabi", "armeabi-v7a", "x86"
+            abiFilters 'arm64-v8a'
+        }
+
+
+        //spalsh广告
+        buildConfigField "String", "SPLASH_AD_KEY_CSJ", '"0081"'
+        buildConfigField "String", "SPLASH_AD_KEY_YLH", '"1094"'
+        buildConfigField "String", "SPLASH_AD_KEY_KS", '"0000"'
+        buildConfigField "String", "SPLASH_AD_KEY_BD", '"1098"'
+        buildConfigField "String", "SPLASH_AD_KEY_BZ", '"0000"'
+
+        //banner广告
+        buildConfigField "String", "BANNER_AD_KEY_CSJ", '"0082"'
+        buildConfigField "String", "BANNER_AD_KEY_YLH", '"1095"'
+
+        //信息流广告
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_CSJ", '"1093"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_YLH", '"1097"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_KS", '"0000"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_BD", '"1100"'
+
+        //插屏广告 Interstitial
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_CSJ", '"1092"'
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_YLH", '"1096"'
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_BD", '"1099"'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    dataBinding {
+        enable = true
+    }
+    flavorDimensions = ["release"]
+    productFlavors {
+        xiaomi { dimension "release" }
+        vivo { dimension "release" }
+        huawei { dimension "release" }
+        oppo { dimension "release" }
+    }
+    productFlavors.all {
+        flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    namespace 'com.iyuba.toelflistening'
+
+    buildFeatures {
+
+        viewBinding true
+    }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {//如果是release包
+                    fileName = "托福听力-${buildType.name}-${defaultConfig.versionName}-" +
+                            "${defaultConfig.versionCode}-${releaseTime()}.apk"
+                } else if (variant.buildType.name.equals('debug')) {//如果是debug包
+                    fileName = "托福听力-${buildType.name}-${defaultConfig.versionName}-" +
+                            "${defaultConfig.versionCode}-${releaseTime()}.apk"
+                }
+                outputFileName = fileName
+            }
+        }
+    }
+
+    sourceSets {
+        main{
+
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core:1.12.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    def retrofitVersion = "2.11.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.google.code.gson:gson:2.10.1"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-simplexml:$retrofitVersion"
+    def lifeVersion = "2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifeVersion"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation("io.coil-kt:coil:1.1.1")
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    def hiltVersion = "2.28-alpha"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    annotationProcessor "com.google.dagger:hilt-android-compiler:$hiltVersion"
+
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库
+    implementation 'com.umeng.umsdk:common:+'// 必选
+    implementation 'com.umeng.umsdk:asms:+'// 必选
+    implementation 'com.umeng.umsdk:uyumao:+'
+    // 高级运营分析功能依赖库，使用U-App卸载分析、开启反作弊能力请务必集成。common需搭配v9.6.3及以上版本，asms需搭配v1.7.0及以上版本。需更新隐私声明。
+    implementation 'com.umeng.umsdk:apm:+'// U-APM产品包依赖，必选
+
+
+    def roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$roomVersion")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    def paging_version = "3.1.1"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    testImplementation "androidx.paging:paging-common:$paging_version"
+
+    implementation files('libs/alipaysdk-noutdid-15.8.05.211018174351.aar')
+
+    implementation files('libs/headlinelibrary-1.7.9.aar')
+    implementation files('libs/imagetextview-1.2.1.aar')
+    implementation files('libs/roundprogressbar-1.0.0.aar')
+    implementation files('libs/mse-0.2.7.aar')
+    implementation files('libs/user-0.2.7.aar')
+    implementation files('libs/progresswheel-1.0.1.aar')
+    implementation files('libs/subtitle-1.2.2.aar')
+    implementation files('libs/textpage-1.2.1.aar')
+    implementation files('libs/mp3trans-0.2.0.aar')
+    implementation files('libs/commonvar-1.0.0.aar')
+    implementation files('libs/toolbox-1.1.0.aar')
+    implementation files('libs/mixed_converter-1.2.1.aar')
+    implementation files('libs/creator-1.0.0.aar')
+    implementation files('libs/mvp-1.0.0.aar')
+    implementation files('libs/adblocker-1.0.0.aar')
+    implementation files('libs/basicfavor-1.2.8-alpha01.aar')
+    implementation files('libs/recycler-0.2.0.aar')
+    implementation files('libs/basicdl-1.2.3-alpha01.aar')
+    implementation files('libs/sdk-0.3.9.aar')
+    implementation files('libs/youdaosdk_4.3.3.aar')
+    implementation files('libs/data-ydsdk-0.3.9-fix2.aar')
+    implementation files('libs/data-youdao-0.1.8-fix2.aar')
+    implementation files('libs/data-iyuba-0.2.0-fix2.aar')
+    implementation files('libs/privacy-1.0.4.aar')
+    implementation files('libs/dlex-1.0.4.aar')
+    implementation files('libs/player-1.2.8.aar')
+    implementation files('libs/share-0.1.3.aar')
+    implementation files('libs/resize-1.0.0.aar')
+//    implementation files('libs/ijkplayer-java-0.8.8-modify.aar')
+    implementation files('libs/vpager-0.1.0.aar')
+    implementation files('libs/waitdialog-1.2.1.aar')
+//    implementation files('libs/ijkplayer-arm64-0.8.8-modify.aar')
+//    implementation files('libs/ijkplayer-x86_64-0.8.8-modify.aar')
+    implementation files('libs/popmenu-0.2.2.aar')
+    implementation files('libs/parse-0.2.4.aar')
+    implementation files('libs/share-mob-0.1.3.aar')
+    implementation files('libs/oaid_sdk_2.5.1.aar')
+    implementation files('libs/universitypicker-0.2.1.aar')
+    implementation "com.flyco.roundview:FlycoRoundView_Lib:1.1.4"
+
+
+    implementation 'com.github.AnthonyFermin:DropDownView:1.0.1'
+    implementation 'com.github.open-android:labelview:0.1.0'
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation("org.greenrobot:eventbus:3.3.1")
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0"
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.2"
+    kapt "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2"
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.github.naman14:TAndroidLame:1.1'
+
+
+    implementation 'id.zelory:compressor:3.0.1'
+
+
+    implementation files('libs/personalhomelibrary-1.6.2.aar')
+    implementation "com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0"
+    implementation files('libs/videocompressor-1.0.aar')
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+
+    //微课的依赖
+    implementation files('libs/imooclib-1.7.1.aar')
+    implementation files('libs/player-1.2.8.aar')
+    implementation files('libs/share-0.1.3.aar')
+    implementation files('libs/player-exo-1.2.8-alpha01.aar')
+    implementation files('libs/player-extended-1.2.8.aar')
+    implementation "com.youth.banner:banner:1.4.10"
+    def exoVersion = "2.18.1"
+    implementation "com.google.android.exoplayer:exoplayer-core:$exoVersion"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$exoVersion"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exoVersion"
+    //微课的依赖
+
+    implementation files('libs/headlinesearch-1.3.1.aar')
+    implementation files('libs/iyubamovies-1.2.9.aar')
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.21"
+    implementation "com.gyf.immersionbar:immersionbar:3.0.0"
+
+
+    //数据库
+    implementation 'org.litepal.guolindev:core:3.2.3'
+
+    //弹窗的框架
+    implementation 'io.github.razerdp:BasePopup:3.2.0'
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+
+    //支持rxjava2
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    //微信
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:+'
+
+    implementation('com.github.lihangleo2:ShadowLayout:3.3.2') {
+        exclude module: 'glide'
+    }
+
+    //广告
+    implementation(name: 'mediatom-0.3.9-fix', ext: 'aar')
+    implementation(name: 'ydsdk-0.3.9-fix', ext: 'aar')
+
+    //头条
+    implementation(name: 'mediatom-tt-adapt-0.3.9-fix4', ext: 'aar')
+    implementation(name: 'open_ad_sdk_6.6.0.7', ext: 'aar')
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    //倍孜
+    implementation(name: 'mediatom-adhub-adapt-0.3.9', ext: 'aar')
+    implementation(name: 'beizi_ad_sdk_3.5.0.9', ext: 'aar')
+    implementation(name: 'beizi_fusion_sdk_4.90.4.11', ext: 'aar')
+    //百度广告
+    implementation(name: 'mediatom-bd-adapt-0.3.9-fix-bdv9.373', ext: 'aar')
+    implementation(name: 'Baidu_MobAds_SDK-release_v9.373', ext: 'aar')
+    //快手广告
+    implementation(name: 'mediatom-ks-adapt-0.3.9', ext: 'aar')
+    implementation(name: 'kssdk-ad-3.3.63-publishRelease-085cdfe109', ext: 'aar')
+    //腾讯广告
+    implementation(name: 'mediatom-tx-adapt-0.3.9-fix2', ext: 'aar')
+    implementation(name: 'GDTSDK.unionNormal.4.620.1490', ext: 'aar')
+
+    implementation(name: 's2s-0.3.9', ext: 'aar')
+    implementation(name: 'mixnative-0.3.9-fix3', ext: 'aar')
+
+    //headlinetalk
+    implementation(name: 'headlinetalk-1.3.7', ext: 'aar')
+    implementation(name: 'commonres-1.2.0', ext: 'aar')
+    implementation(name: 'exomedia-4.3.0-modify', ext: 'aar')
+
+    implementation "com.airbnb.android:lottie:5.2.0"
+
+    implementation "cn.fly:FlyVerify:+@aar"
+    implementation "cn.fly.plugins:FlyPlugins-Cmcc:+@aar"
+    implementation "cn.fly.plugins:FlyPlugins-Cucc:+@aar"
+    implementation "cn.fly.plugins:FlyPlugins-XW:+@aar"
+    implementation "cn.fly.plugins:FlyPlugins-Ctcc:+@aar"
+
+}
+MobSDK {
+    appKey "1bda93269b8c8"
+    appSecret "3ee634624416a5959e224eb0989c8276"
+    SMSSDK {}
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wxd88cfd20b7f86ae0"
+                appSecret "af47c766f7f9f6f722920ca15dbbcafe"
+            }
+            QQ {
+                appId "101679858"
+                appKey "7592465163a0cf01bf4db0b43fb29878"
+                shareByAppClient true
+            }
+
+            WechatMoments {
+                appId "wxd88cfd20b7f86ae0"
+                appSecret "af47c766f7f9f6f722920ca15dbbcafe"
+            }
+        }
+    }
+}

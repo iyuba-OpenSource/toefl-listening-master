@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="headline_bbc_category_codes">
+    <item>@integer/headline_bbc_category_code_all</item>
+    <item>@integer/headline_bbc_category_code_bbc_news</item>
+    <item>@integer/headline_bbc_category_code_six_minute</item>
+    <item>@integer/headline_bbc_category_code_news_words</item>
+    <item>@integer/headline_bbc_category_code_native</item>
+    <item>@integer/headline_bbc_category_code_economist</item>
+    <item>@integer/headline_bbc_category_code_itv_news</item>
+    <item>@integer/headline_bbc_category_code_skype_news</item>
+    <item>@integer/headline_bbc_category_code_working</item>
+  </integer-array>
+    <string-array name="headline_bbc_category_names">
+    <item>@string/headline_bbc_category_all</item>
+    <item>@string/headline_bbc_category_bbc_news</item>
+    <item>@string/headline_bbc_category_six_minute</item>
+    <item>@string/headline_bbc_category_news_words</item>
+    <item>@string/headline_bbc_category_native</item>
+    <item>@string/headline_bbc_category_economist</item>
+    <item>@string/headline_bbc_category_itv_news</item>
+    <item>@string/headline_bbc_category_skype_news</item>
+    <item>@string/headline_bbc_category_working</item>
+  </string-array>
+    <integer-array name="headline_bbc_video_category_codes">
+    <item>@integer/headline_bbc_category_code_bbc_news</item>
+    <item>@integer/headline_bbc_category_code_itv_news</item>
+    <item>@integer/headline_bbc_category_code_skype_news</item>
+    <item>@integer/headline_bbc_category_code_news_words</item>
+    <item>@integer/headline_bbc_category_code_economist</item>
+  </integer-array>
+    <string-array name="headline_bbc_video_category_names">
+    <item>@string/headline_bbc_category_bbc_news</item>
+    <item>@string/headline_bbc_category_itv_news</item>
+    <item>@string/headline_bbc_category_skype_news</item>
+    <item>@string/headline_bbc_category_news_words</item>
+    <item>@string/headline_bbc_category_economist</item>
+  </string-array>
+    <integer-array name="headline_cnn_category_codes">
+    <item>@integer/headline_cnn_category_code_all</item>
+    <item>@integer/headline_cnn_category_code_music</item>
+    <item>@integer/headline_cnn_category_code_entertain</item>
+    <item>@integer/headline_cnn_category_code_sports</item>
+    <item>@integer/headline_cnn_category_code_movie</item>
+    <item>@integer/headline_cnn_category_code_tech</item>
+    <item>@integer/headline_cnn_category_code_economy</item>
+    <item>@integer/headline_cnn_category_code_society</item>
+    <item>@integer/headline_cnn_category_code_documentary</item>
+    <item>@integer/headline_cnn_category_code_health</item>
+    <item>@integer/headline_cnn_category_code_education</item>
+    <item>@integer/headline_cnn_category_code_talk_show</item>
+    <item>@integer/headline_cnn_category_code_life</item>
+  </integer-array>
+    <string-array name="headline_cnn_category_names">
+    <item>@string/headline_cnn_category_all</item>
+    <item>@string/headline_cnn_category_music</item>
+    <item>@string/headline_cnn_category_entertain</item>
+    <item>@string/headline_cnn_category_sports</item>
+    <item>@string/headline_cnn_category_movie</item>
+    <item>@string/headline_cnn_category_tech</item>
+    <item>@string/headline_cnn_category_economy</item>
+    <item>@string/headline_cnn_category_society</item>
+    <item>@string/headline_cnn_category_documentary</item>
+    <item>@string/headline_cnn_category_health</item>
+    <item>@string/headline_cnn_category_education</item>
+    <item>@string/headline_cnn_category_talk_show</item>
+    <item>@string/headline_cnn_category_life</item>
+  </string-array>
+    <integer-array name="headline_csvoa_category_codes">
+    <item>@integer/headline_csvoa_category_code_all</item>
+    <item>@integer/headline_csvoa_category_code_america</item>
+    <item>@integer/headline_csvoa_category_code_africa</item>
+    <item>@integer/headline_csvoa_category_code_asia</item>
+    <item>@integer/headline_csvoa_category_code_mideast</item>
+    <item>@integer/headline_csvoa_category_code_europe</item>
+    <item>@integer/headline_csvoa_category_code_tech</item>
+    <item>@integer/headline_csvoa_category_code_entertain</item>
+    <item>@integer/headline_csvoa_category_code_economy</item>
+    <item>@integer/headline_csvoa_category_code_health</item>
+  </integer-array>
+    <string-array name="headline_csvoa_category_names">
+    <item>@string/headline_csvoa_category_all</item>
+    <item>@string/headline_csvoa_category_america</item>
+    <item>@string/headline_csvoa_category_africa</item>
+    <item>@string/headline_csvoa_category_asia</item>
+    <item>@string/headline_csvoa_category_mideast</item>
+    <item>@string/headline_csvoa_category_europe</item>
+    <item>@string/headline_csvoa_category_tech</item>
+    <item>@string/headline_csvoa_category_entertain</item>
+    <item>@string/headline_csvoa_category_economy</item>
+    <item>@string/headline_csvoa_category_health</item>
+  </string-array>
+    <integer-array name="headline_jap_category_codes">
+    <item>@integer/headline_jap_category_code_all</item>
+    <item>@integer/headline_jap_category_code_entertain</item>
+    <item>@integer/headline_jap_category_code_nature</item>
+    <item>@integer/headline_jap_category_code_science_culture</item>
+    <item>@integer/headline_jap_category_code_politics</item>
+    <item>@integer/headline_jap_category_code_business_news</item>
+    <item>@integer/headline_jap_category_code_international</item>
+    <item>@integer/headline_jap_category_code_sports</item>
+    <item>@integer/headline_jap_category_code_life</item>
+    <item>@integer/headline_jap_category_code_district_news</item>
+  </integer-array>
+    <string-array name="headline_jap_category_names">
+    <item>@string/headline_jap_category_all</item>
+    <item>@string/headline_jap_category_entertain</item>
+    <item>@string/headline_jap_category_nature</item>
+    <item>@string/headline_jap_category_science_culture</item>
+    <item>@string/headline_jap_category_politics</item>
+    <item>@string/headline_jap_category_business_news</item>
+    <item>@string/headline_jap_category_international</item>
+    <item>@string/headline_jap_category_sports</item>
+    <item>@string/headline_jap_category_life</item>
+    <item>@string/headline_jap_category_district_news</item>
+  </string-array>
+    <integer-array name="headline_meiyu_category_codes">
+    <item>@integer/headline_meiyu_category_code_all</item>
+    <item>@integer/headline_meiyu_category_code_drama</item>
+    <item>@integer/headline_meiyu_category_code_one_minute</item>
+    <item>@integer/headline_meiyu_category_code_how_to_say</item>
+  </integer-array>
+    <string-array name="headline_meiyu_category_names">
+    <item>@string/headline_meiyu_category_all</item>
+    <item>@string/headline_meiyu_category_drama</item>
+    <item>@string/headline_meiyu_category_one_minute</item>
+    <item>@string/headline_meiyu_category_how_to_say</item>
+  </string-array>
+    <integer-array name="headline_news_category_codes">
+    <item>@integer/headline_news_category_code_top</item>
+    <item>@integer/headline_news_category_code_campus</item>
+    <item>@integer/headline_news_category_code_entertain</item>
+    <item>@integer/headline_news_category_code_movie</item>
+    <item>@integer/headline_news_category_code_tourism</item>
+    <item>@integer/headline_news_category_code_game</item>
+    <item>@integer/headline_news_category_code_tech</item>
+    <item>@integer/headline_news_category_code_sports</item>
+    <item>@integer/headline_news_category_code_workplace</item>
+    <item>@integer/headline_news_category_code_economy</item>
+    <item>@integer/headline_news_category_code_culture</item>
+    <item>@integer/headline_news_category_code_life</item>
+  </integer-array>
+    <string-array name="headline_news_category_names">
+    <item>@string/headline_news_category_top</item>
+    <item>@string/headline_news_category_campus</item>
+    <item>@string/headline_news_category_entertain</item>
+    <item>@string/headline_news_category_movie</item>
+    <item>@string/headline_news_category_tourism</item>
+    <item>@string/headline_news_category_game</item>
+    <item>@string/headline_news_category_tech</item>
+    <item>@string/headline_news_category_sports</item>
+    <item>@string/headline_news_category_workplace</item>
+    <item>@string/headline_news_category_economy</item>
+    <item>@string/headline_news_category_culture</item>
+    <item>@string/headline_news_category_life</item>
+  </string-array>
+    <integer-array name="headline_newsvideo_category_codes">
+    <item>@integer/headline_news_category_code_top</item>
+    <item>@integer/headline_news_category_code_inews</item>
+    <item>@integer/headline_news_category_code_campus</item>
+    <item>@integer/headline_news_category_code_entertain</item>
+    <item>@integer/headline_news_category_code_movie</item>
+    <item>@integer/headline_news_category_code_tourism</item>
+    <item>@integer/headline_news_category_code_game</item>
+    <item>@integer/headline_news_category_code_tech</item>
+    <item>@integer/headline_news_category_code_sports</item>
+    <item>@integer/headline_news_category_code_workplace</item>
+    <item>@integer/headline_news_category_code_economy</item>
+    <item>@integer/headline_news_category_code_culture</item>
+    <item>@integer/headline_news_category_code_life</item>
+  </integer-array>
+    <string-array name="headline_newsvideo_category_names">
+    <item>@string/headline_news_category_top</item>
+    <item>@string/headline_news_category_inews</item>
+    <item>@string/headline_news_category_campus</item>
+    <item>@string/headline_news_category_entertain</item>
+    <item>@string/headline_news_category_movie</item>
+    <item>@string/headline_news_category_tourism</item>
+    <item>@string/headline_news_category_game</item>
+    <item>@string/headline_news_category_tech</item>
+    <item>@string/headline_news_category_sports</item>
+    <item>@string/headline_news_category_workplace</item>
+    <item>@string/headline_news_category_economy</item>
+    <item>@string/headline_news_category_culture</item>
+    <item>@string/headline_news_category_life</item>
+  </string-array>
+    <integer-array name="headline_ted_category_codes">
+    <item>@integer/headline_ted_category_code_all</item>
+    <item>@integer/headline_ted_category_code_culture</item>
+    <item>@integer/headline_ted_category_code_economy</item>
+    <item>@integer/headline_ted_category_code_politics</item>
+    <item>@integer/headline_ted_category_code_science</item>
+    <item>@integer/headline_ted_category_code_tech</item>
+    <item>@integer/headline_ted_category_code_health</item>
+    <item>@integer/headline_ted_category_code_art</item>
+    <item>@integer/headline_ted_category_code_music</item>
+    <item>@integer/headline_ted_category_code_education</item>
+    <item>@integer/headline_ted_category_code_genius</item>
+    <item>@integer/headline_ted_category_code_nature</item>
+  </integer-array>
+    <string-array name="headline_ted_category_names">
+    <item>@string/headline_ted_category_all</item>
+    <item>@string/headline_ted_category_culture</item>
+    <item>@string/headline_ted_category_economy</item>
+    <item>@string/headline_ted_category_politics</item>
+    <item>@string/headline_ted_category_science</item>
+    <item>@string/headline_ted_category_tech</item>
+    <item>@string/headline_ted_category_health</item>
+    <item>@string/headline_ted_category_art</item>
+    <item>@string/headline_ted_category_music</item>
+    <item>@string/headline_ted_category_education</item>
+    <item>@string/headline_ted_category_genius</item>
+    <item>@string/headline_ted_category_nature</item>
+  </string-array>
+    <integer-array name="headline_video_category_codes">
+    <item>@integer/headline_news_category_code_top</item>
+    <item>@integer/headline_video_category_code_movie</item>
+    <item>@integer/headline_video_category_code_music</item>
+    <item>@integer/headline_video_category_code_china</item>
+    <item>@integer/headline_video_category_code_world</item>
+    <item>@integer/headline_video_category_code_politics</item>
+    <item>@integer/headline_video_category_code_business</item>
+    <item>@integer/headline_video_category_code_technology</item>
+    <item>@integer/headline_video_category_code_campus</item>
+    <item>@integer/headline_video_category_code_sport</item>
+    <item>@integer/headline_video_category_code_trip</item>
+    <item>@integer/headline_video_category_code_culture</item>
+    <item>@integer/headline_video_category_code_study</item>
+  </integer-array>
+    <string-array name="headline_video_category_names">
+    <item>@string/headline_voa_category_all</item>
+    <item>@string/headline_video_category_movie</item>
+    <item>@string/headline_video_category_music</item>
+    <item>@string/headline_video_category_china</item>
+    <item>@string/headline_video_category_world</item>
+    <item>@string/headline_video_category_politics</item>
+    <item>@string/headline_video_category_business</item>
+    <item>@string/headline_video_category_technology</item>
+    <item>@string/headline_video_category_campus</item>
+    <item>@string/headline_video_category_sport</item>
+    <item>@string/headline_video_category_trip</item>
+    <item>@string/headline_video_category_culture</item>
+    <item>@string/headline_video_category_study</item>
+  </string-array>
+    <integer-array name="headline_voa_category_codes">
+    <item>@integer/headline_voa_category_code_all</item>
+    <item>@integer/headline_voa_category_code_america</item>
+    <item>@integer/headline_voa_category_code_world</item>
+    <item>@integer/headline_voa_category_code_life</item>
+    <item>@integer/headline_voa_category_code_entertain</item>
+    <item>@integer/headline_voa_category_code_health</item>
+    <item>@integer/headline_voa_category_code_education</item>
+    <item>@integer/headline_voa_category_code_business</item>
+    <item>@integer/headline_voa_category_code_tech</item>
+    <item>@integer/headline_voa_category_code_history</item>
+    <item>@integer/headline_voa_category_code_word_story</item>
+  </integer-array>
+    <string-array name="headline_voa_category_names">
+    <item>@string/headline_voa_category_all</item>
+    <item>@string/headline_voa_category_america</item>
+    <item>@string/headline_voa_category_world</item>
+    <item>@string/headline_voa_category_life</item>
+    <item>@string/headline_voa_category_entertain</item>
+    <item>@string/headline_voa_category_health</item>
+    <item>@string/headline_voa_category_education</item>
+    <item>@string/headline_voa_category_business</item>
+    <item>@string/headline_voa_category_tech</item>
+    <item>@string/headline_voa_category_history</item>
+    <item>@string/headline_voa_category_word_story</item>
+  </string-array>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/purple_500</color>
+    <color name="colorPrimaryDark">@color/purple_500</color>
+    <color name="headline_comment_name_color">@color/purple_500</color>
+    <color name="headline_999_personal">#999999</color>
+    <color name="headline_comment_content_color">#505050</color>
+    <color name="headline_comment_like_color">#505050</color>
+    <color name="headline_default_font_gray">#666666</color>
+    <color name="headline_detail_text_color">#4d4d4d</color>
+    <color name="headline_detail_title_color">#4d4d4d</color>
+    <color name="headline_download_progress_second_color">#e7e7e7</color>
+    <color name="headline_dropDownContainerColor">@color/colorPrimary</color>
+    <color name="headline_dropDownOverlay">@android:color/white</color>
+    <color name="headline_dropDownSelectedColor">@color/colorPrimaryDark</color>
+    <color name="headline_highlight">@color/purple_500</color>
+    <color name="headline_highlight_personal">@color/purple_500</color>
+    <color name="headline_item_middle_title_color">#393939</color>
+    <color name="headline_item_middle_type_color">#989aa6</color>
+    <color name="headline_item_small_title_color">#343434</color>
+    <color name="headline_news_color">#696969</color>
+    <color name="headline_popup_color">#F3F3F3</color>
+    <color name="headline_source_color">#787878</color>
+    <color name="headline_tab_text_color">#f1f2f5</color>
+    <color name="headline_text_share_color">#491d1e</color>
+    <color name="headline_text_share_line_color">#797979</color>
+    <color name="headline_toolbar_split_line">#c3c3c3</color>
+    <color name="headline_video_highlight">@color/purple_500</color>
+    <item name="headline_func_collect" type="id"/>
+    <item name="headline_func_comment" type="id"/>
+    <item name="headline_func_download" type="id"/>
+    <item name="headline_func_evaluate" type="id"/>
+    <item name="headline_func_iyucircle" type="id"/>
+    <item name="headline_func_like" type="id"/>
+    <item name="headline_func_pdf" type="id"/>
+    <item name="headline_func_share" type="id"/>
+    <item name="headline_func_store" type="id"/>
+    <item name="headline_func_switch" type="id"/>
+    <item name="headline_func_sync" type="id"/>
+    <integer name="headline_bbc_category_code_all">0</integer>
+    <integer name="headline_bbc_category_code_bbc_news">3</integer>
+    <integer name="headline_bbc_category_code_economist">8</integer>
+    <integer name="headline_bbc_category_code_itv_news">9</integer>
+    <integer name="headline_bbc_category_code_native">5</integer>
+    <integer name="headline_bbc_category_code_news_words">4</integer>
+    <integer name="headline_bbc_category_code_six_minute">1</integer>
+    <integer name="headline_bbc_category_code_skype_news">10</integer>
+    <integer name="headline_bbc_category_code_working">2</integer>
+    <integer name="headline_cnn_category_code_all">0</integer>
+    <integer name="headline_cnn_category_code_documentary">408</integer>
+    <integer name="headline_cnn_category_code_economy">406</integer>
+    <integer name="headline_cnn_category_code_education">410</integer>
+    <integer name="headline_cnn_category_code_entertain">402</integer>
+    <integer name="headline_cnn_category_code_health">409</integer>
+    <integer name="headline_cnn_category_code_life">412</integer>
+    <integer name="headline_cnn_category_code_movie">404</integer>
+    <integer name="headline_cnn_category_code_music">401</integer>
+    <integer name="headline_cnn_category_code_society">407</integer>
+    <integer name="headline_cnn_category_code_sports">403</integer>
+    <integer name="headline_cnn_category_code_talk_show">411</integer>
+    <integer name="headline_cnn_category_code_tech">405</integer>
+    <integer name="headline_csvoa_category_code_africa">102</integer>
+    <integer name="headline_csvoa_category_code_all">0</integer>
+    <integer name="headline_csvoa_category_code_america">101</integer>
+    <integer name="headline_csvoa_category_code_asia">103</integer>
+    <integer name="headline_csvoa_category_code_economy">108</integer>
+    <integer name="headline_csvoa_category_code_entertain">107</integer>
+    <integer name="headline_csvoa_category_code_europe">105</integer>
+    <integer name="headline_csvoa_category_code_health">109</integer>
+    <integer name="headline_csvoa_category_code_mideast">104</integer>
+    <integer name="headline_csvoa_category_code_tech">106</integer>
+    <integer name="headline_jap_category_code_all">-1</integer>
+    <integer name="headline_jap_category_code_business_news">505</integer>
+    <integer name="headline_jap_category_code_district_news">509</integer>
+    <integer name="headline_jap_category_code_entertain">501</integer>
+    <integer name="headline_jap_category_code_international">506</integer>
+    <integer name="headline_jap_category_code_life">508</integer>
+    <integer name="headline_jap_category_code_nature">502</integer>
+    <integer name="headline_jap_category_code_politics">504</integer>
+    <integer name="headline_jap_category_code_science_culture">503</integer>
+    <integer name="headline_jap_category_code_sports">507</integer>
+    <integer name="headline_meiyu_category_code_all">198</integer>
+    <integer name="headline_meiyu_category_code_drama">197</integer>
+    <integer name="headline_meiyu_category_code_how_to_say">200</integer>
+    <integer name="headline_meiyu_category_code_one_minute">199</integer>
+    <integer name="headline_news_category_code_campus">120</integer>
+    <integer name="headline_news_category_code_culture">127</integer>
+    <integer name="headline_news_category_code_economy">126</integer>
+    <integer name="headline_news_category_code_entertain">121</integer>
+    <integer name="headline_news_category_code_game">293</integer>
+    <integer name="headline_news_category_code_inews">228</integer>
+    <integer name="headline_news_category_code_life">128</integer>
+    <integer name="headline_news_category_code_movie">291</integer>
+    <integer name="headline_news_category_code_sports">123</integer>
+    <integer name="headline_news_category_code_tech">122</integer>
+    <integer name="headline_news_category_code_top">0</integer>
+    <integer name="headline_news_category_code_tourism">292</integer>
+    <integer name="headline_news_category_code_workplace">124</integer>
+    <integer name="headline_ted_category_code_all">0</integer>
+    <integer name="headline_ted_category_code_art">207</integer>
+    <integer name="headline_ted_category_code_culture">201</integer>
+    <integer name="headline_ted_category_code_economy">202</integer>
+    <integer name="headline_ted_category_code_education">209</integer>
+    <integer name="headline_ted_category_code_genius">210</integer>
+    <integer name="headline_ted_category_code_health">206</integer>
+    <integer name="headline_ted_category_code_music">208</integer>
+    <integer name="headline_ted_category_code_nature">211</integer>
+    <integer name="headline_ted_category_code_politics">203</integer>
+    <integer name="headline_ted_category_code_science">204</integer>
+    <integer name="headline_ted_category_code_tech">205</integer>
+    <integer name="headline_video_category_code_business">16</integer>
+    <integer name="headline_video_category_code_campus">18</integer>
+    <integer name="headline_video_category_code_china">13</integer>
+    <integer name="headline_video_category_code_culture">21</integer>
+    <integer name="headline_video_category_code_movie">11</integer>
+    <integer name="headline_video_category_code_music">12</integer>
+    <integer name="headline_video_category_code_politics">15</integer>
+    <integer name="headline_video_category_code_sport">19</integer>
+    <integer name="headline_video_category_code_study">22</integer>
+    <integer name="headline_video_category_code_technology">17</integer>
+    <integer name="headline_video_category_code_trip">20</integer>
+    <integer name="headline_video_category_code_world">14</integer>
+    <integer name="headline_voa_category_code_all">0</integer>
+    <integer name="headline_voa_category_code_america">1</integer>
+    <integer name="headline_voa_category_code_business">7</integer>
+    <integer name="headline_voa_category_code_education">6</integer>
+    <integer name="headline_voa_category_code_entertain">4</integer>
+    <integer name="headline_voa_category_code_health">5</integer>
+    <integer name="headline_voa_category_code_history">9</integer>
+    <integer name="headline_voa_category_code_life">3</integer>
+    <integer name="headline_voa_category_code_tech">8</integer>
+    <integer name="headline_voa_category_code_word_story">10</integer>
+    <integer name="headline_voa_category_code_world">2</integer>
+    <string name="headline_accomplish_read">Accomplish</string>
+    <string name="headline_add_credit_hint">Credit +%1$d, remain %2$d.</string>
+    <string name="headline_all_data_load">All data loaded</string>
+    <string name="headline_bbc_category_all">ALL</string>
+    <string name="headline_bbc_category_bbc_news">BBC News</string>
+    <string name="headline_bbc_category_economist">Economist</string>
+    <string name="headline_bbc_category_itv_news">ITV News</string>
+    <string name="headline_bbc_category_native">Native English</string>
+    <string name="headline_bbc_category_news_words">News Words</string>
+    <string name="headline_bbc_category_six_minute">Six Minute</string>
+    <string name="headline_bbc_category_skype_news">SKYPE News</string>
+    <string name="headline_bbc_category_working">Working English</string>
+    <string name="headline_bbc_literal" translatable="false">BBE</string>
+    <string name="headline_bilingual_subtitle">Bilingual subtitle</string>
+    <string name="headline_buy_vip_hint">Buy VIP to use this functionality!</string>
+    <string name="headline_cancel_upvote">Upvoted cancelled</string>
+    <string name="headline_cancel_upvote_failed">Cancel upvote failed, please try later!</string>
+    <string name="headline_check_network">Please check network！</string>
+    <string name="headline_chinese_subtitle">Chinese subtitle</string>
+    <string name="headline_choose_category">Choose Category</string>
+    <string name="headline_close">Close</string>
+    <string name="headline_close_subtitle">Close subtitle</string>
+    <string name="headline_cnn_category_all">All</string>
+    <string name="headline_cnn_category_documentary">Documentary</string>
+    <string name="headline_cnn_category_economy">Economy</string>
+    <string name="headline_cnn_category_education">Education</string>
+    <string name="headline_cnn_category_entertain">Education</string>
+    <string name="headline_cnn_category_health">Health</string>
+    <string name="headline_cnn_category_life">Life</string>
+    <string name="headline_cnn_category_movie">Movie</string>
+    <string name="headline_cnn_category_music">Music</string>
+    <string name="headline_cnn_category_society">Society</string>
+    <string name="headline_cnn_category_sports">Sports</string>
+    <string name="headline_cnn_category_talk_show">TalkShow</string>
+    <string name="headline_cnn_category_tech">Technology</string>
+    <string name="headline_comment_empty_warn">Comment is empty!</string>
+    <string name="headline_comment_input_hint">Please input comment</string>
+    <string name="headline_comment_long_warn">Comment is too long!</string>
+    <string name="headline_comment_reply">Click to reply</string>
+    <string name="headline_comment_short_warn">Comment is too short!</string>
+    <string name="headline_comment_title">Comment</string>
+    <string name="headline_credit_not_enough">Credit not enough, please charge for VIP</string>
+    <string name="headline_csvoa_category_africa">Africa</string>
+    <string name="headline_csvoa_category_all">All</string>
+    <string name="headline_csvoa_category_america">America</string>
+    <string name="headline_csvoa_category_asia">Asia</string>
+    <string name="headline_csvoa_category_economy">Economy</string>
+    <string name="headline_csvoa_category_entertain">Entertainment</string>
+    <string name="headline_csvoa_category_europe">Europe</string>
+    <string name="headline_csvoa_category_health">Health</string>
+    <string name="headline_csvoa_category_mideast">Mideast</string>
+    <string name="headline_csvoa_category_tech">Technology</string>
+    <string name="headline_deduct_credit_failed">Deduct credit failed, please charge for VIP</string>
+    <string name="headline_delete_failed">Delete failed, please try later!</string>
+    <string name="headline_delete_succeed">Delete succeed!</string>
+    <string name="headline_deleting">Deleting</string>
+    <string name="headline_download">Download</string>
+    <string name="headline_download_credit_hint">Download cost %1$d credit, remain %2$d.</string>
+    <string name="headline_download_pause">Pause</string>
+    <string name="headline_downloaded">Downloaded</string>
+    <string name="headline_downloading">Downloading</string>
+    <string name="headline_en_subtitle_video">En Sub Video</string>
+    <string name="headline_english_subtitle">English subtitle</string>
+    <string name="headline_evaluate">Evaluate</string>
+    <string name="headline_evaluate_limit_hint">Normal user could evaluate %1$d sentence per article, upgrade?</string>
+    <string name="headline_evaluate_rank">Rank</string>
+    <string name="headline_evaluate_score_share_hint">
+    %1$s have got %2$d score in Iyuba speaking evaluation
+  </string>
+    <string name="headline_get_pdf_failed">Get PDF failed, please try again later</string>
+    <string name="headline_go_gallery_see">%1$s Saved, go gallery and see</string>
+    <string name="headline_increase_credit_hint">Credit +%1$d.</string>
+    <string name="headline_jap_category_all">All</string>
+    <string name="headline_jap_category_business_news">Business News</string>
+    <string name="headline_jap_category_district_news">District News</string>
+    <string name="headline_jap_category_entertain">Entertainment</string>
+    <string name="headline_jap_category_international">International</string>
+    <string name="headline_jap_category_life">Life</string>
+    <string name="headline_jap_category_nature">Nature</string>
+    <string name="headline_jap_category_politics">Politics</string>
+    <string name="headline_jap_category_science_culture">Science/Culture</string>
+    <string name="headline_jap_category_sports">Sports</string>
+    <string name="headline_japanese_subtitle">Japanese subtitle</string>
+    <string name="headline_jp_subtitle_video">JP Sub Video</string>
+    <string name="headline_load_failed_retry">Loading failed, please try again later!</string>
+    <string name="headline_loading">Loading</string>
+    <string name="headline_loading_failed">Loading failed, please check your network!</string>
+    <string name="headline_login_share_gain_credit">Login and share to gain credit!</string>
+    <string name="headline_meiyu_category_all">All</string>
+    <string name="headline_meiyu_category_drama">Drama</string>
+    <string name="headline_meiyu_category_how_to_say">How To Say</string>
+    <string name="headline_meiyu_category_one_minute">One Minute</string>
+    <string name="headline_menu_adjust_speed">Speed</string>
+    <string name="headline_menu_app_download">Download APP</string>
+    <string name="headline_menu_ch_en">Switch</string>
+    <string name="headline_menu_ch_jp">Switch</string>
+    <string name="headline_menu_circle">Moments</string>
+    <string name="headline_menu_collect">Collect</string>
+    <string name="headline_menu_comment">Comment</string>
+    <string name="headline_menu_pdf" translatable="false">PDF</string>
+    <string name="headline_menu_refresh">Refresh</string>
+    <string name="headline_menu_share">Share</string>
+    <string name="headline_menu_synchronize">Sync</string>
+    <string name="headline_merge">Merge</string>
+    <string name="headline_merge_accomplished">Merge accomplished!</string>
+    <string name="headline_merge_at_least_two">You can merge after evaluating two sentence!</string>
+    <string name="headline_merge_error">Merge error!</string>
+    <string name="headline_mobile_data_download_hint_message">The current download will cost you a lot of traffic, whether or not to continue？</string>
+    <string name="headline_native_ad_hint">AD</string>
+    <string name="headline_news_category_campus">Campus</string>
+    <string name="headline_news_category_culture">Culture</string>
+    <string name="headline_news_category_economy">Economy</string>
+    <string name="headline_news_category_entertain">Entertainment</string>
+    <string name="headline_news_category_game">Game</string>
+    <string name="headline_news_category_inews">iNews</string>
+    <string name="headline_news_category_life">Life</string>
+    <string name="headline_news_category_movie">Movie</string>
+    <string name="headline_news_category_politics">Politics</string>
+    <string name="headline_news_category_sports">Sports</string>
+    <string name="headline_news_category_tech">Technology</string>
+    <string name="headline_news_category_top">Headline</string>
+    <string name="headline_news_category_tourism">Tourism</string>
+    <string name="headline_news_category_workplace">Workplace</string>
+    <string name="headline_news_literal">News</string>
+    <string name="headline_news_study_info">Words：%1$d\nSpeed：%2$d/min\nCredit：%3$d</string>
+    <string name="headline_news_study_title">Submit Succeed</string>
+    <string name="headline_next_time">Next Time</string>
+    <string name="headline_no_data">No data</string>
+    <string name="headline_no_hint_any_more">No Hint</string>
+    <string name="headline_no_internet">No internet</string>
+    <string name="headline_no_subtitle_video">No Sub Video</string>
+    <string name="headline_original_text">Text</string>
+    <string name="headline_pause">Pause</string>
+    <string name="headline_pdf_export_en">Export English</string>
+    <string name="headline_pdf_export_en_ch">Export English and Chinese</string>
+    <string name="headline_pdf_export_jp">Export Japanese</string>
+    <string name="headline_pdf_export_jp_ch">Export Japanese and Chinese</string>
+    <string name="headline_pdf_export_link_generated">PDF Link Generated!</string>
+    <string name="headline_pdf_export_link_info">%1$s \t(Link Copied)</string>
+    <string name="headline_pdf_generate_cost_credit_hint">%1$d credit will be cost to generate PDF link, continue?</string>
+    <string name="headline_pdf_select_export_type">Please select PDF export type</string>
+    <string name="headline_please_sign_in">Please sign in~</string>
+    <string name="headline_publish">Publish</string>
+    <string name="headline_publish_failed">Publish failed, please try later!</string>
+    <string name="headline_related_recommendation">Related Videos</string>
+    <string name="headline_search_no_result_info">No search result for %1$s!</string>
+    <string name="headline_search_result_info">Search result for %1$s:</string>
+    <string name="headline_send">Send</string>
+    <string name="headline_send_to_rank">Voice is sent to rank!</string>
+    <string name="headline_send_to_rank_add_credit">Voice is sent to rank, credit +%1$d!</string>
+    <string name="headline_server_buzy">Server buzy, please try again later!</string>
+    <string name="headline_share_succeed">Share succeed</string>
+    <string name="headline_song_literal">Song</string>
+    <string name="headline_source_info">Source:%1$s</string>
+    <string name="headline_ted_category_all">All</string>
+    <string name="headline_ted_category_art">Art</string>
+    <string name="headline_ted_category_culture">Culture</string>
+    <string name="headline_ted_category_economy">Economy</string>
+    <string name="headline_ted_category_education">Education</string>
+    <string name="headline_ted_category_genius">Genius</string>
+    <string name="headline_ted_category_health">Health</string>
+    <string name="headline_ted_category_music">Music</string>
+    <string name="headline_ted_category_nature">Nature</string>
+    <string name="headline_ted_category_politics">Politics</string>
+    <string name="headline_ted_category_science">Science</string>
+    <string name="headline_ted_category_tech">Technology</string>
+    <string name="headline_ted_literal" translatable="false">TED</string>
+    <string name="headline_type_all">All</string>
+    <string name="headline_type_audio">Audio</string>
+    <string name="headline_type_bbc">BBE</string>
+    <string name="headline_type_bbcwordvideo">BBE video</string>
+    <string name="headline_type_class">Class</string>
+    <string name="headline_type_csvoa">VOA normal</string>
+    <string name="headline_type_headline">News Video</string>
+    <string name="headline_type_hot_news">News</string>
+    <string name="headline_type_japanvideos">Japan Video</string>
+    <string name="headline_type_meiyu">American English</string>
+    <string name="headline_type_news">News</string>
+    <string name="headline_type_question">Question</string>
+    <string name="headline_type_smallvideo">Small Video</string>
+    <string name="headline_type_song">Song</string>
+    <string name="headline_type_ted">TED Speech</string>
+    <string name="headline_type_topvideos">Top video</string>
+    <string name="headline_type_video">Video</string>
+    <string name="headline_type_voa">VOA</string>
+    <string name="headline_type_voavideo">VOA Video</string>
+    <string name="headline_type_word">Word</string>
+    <string name="headline_upgrade_now">Upgrade Now</string>
+    <string name="headline_upvote_failed">Upvote failed, please try later!</string>
+    <string name="headline_upvote_succeed">Upvote succeed</string>
+    <string name="headline_video_category_business">Business</string>
+    <string name="headline_video_category_campus">Campus</string>
+    <string name="headline_video_category_china">China</string>
+    <string name="headline_video_category_culture">Culture</string>
+    <string name="headline_video_category_movie">Movie</string>
+    <string name="headline_video_category_music">Music</string>
+    <string name="headline_video_category_politics">Politics</string>
+    <string name="headline_video_category_sport">Sports</string>
+    <string name="headline_video_category_study">Study</string>
+    <string name="headline_video_category_technology">Technology</string>
+    <string name="headline_video_category_trip">Trip</string>
+    <string name="headline_video_category_world">World</string>
+    <string name="headline_video_downloading_info">%1$s downloading %2$d%%</string>
+    <string name="headline_view_count_info">%1$s viewed</string>
+    <string name="headline_voa_category_all">ALL</string>
+    <string name="headline_voa_category_america">America</string>
+    <string name="headline_voa_category_business">Business</string>
+    <string name="headline_voa_category_education">Education</string>
+    <string name="headline_voa_category_entertain">Entertainment</string>
+    <string name="headline_voa_category_health">Health</string>
+    <string name="headline_voa_category_history">History</string>
+    <string name="headline_voa_category_life">Life</string>
+    <string name="headline_voa_category_tech">Technology</string>
+    <string name="headline_voa_category_word_story">Word Story</string>
+    <string name="headline_voa_category_world">World</string>
+    <string name="headline_voa_literal" translatable="false">VOA</string>
+    <string name="headline_word_add">Collect new word</string>
+    <string name="headline_word_add_failed">Add failed, please try again later!</string>
+    <string name="headline_word_add_success">Add succeed!</string>
+    <string name="headline_word_no_definition">No definition!</string>
+    <string name="headline_wrong_word_hint">Please select English word</string>
+    <string name="headline_zh_subtitle_video">Zh Sub Video</string>
+    <style name="HeadlineDialog" parent="android:style/Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+  </style>
+    <style name="HeadlineTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+    <style name="HeadlineVideoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@android:color/black</item>
+    <item name="colorPrimaryDark">@android:color/black</item>
+    <item name="colorAccent">@color/colorPrimary</item>
+  </style>
+</resources>

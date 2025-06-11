@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.iyuba.toelflistening.bean.ExerciseRecord" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_margin="@dimen/short_interval"
+            android:textSize="@dimen/standard_text"
+            android:gravity="center"
+            android:text="@{item.testNumber}"
+            android:textColor="@color/white"
+            android:background="@drawable/ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="@dimen/short_interval"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:text="@{item.title}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="@dimen/short_interval"
+            android:text='@{"您的选择："+item.userAnswer}'
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="@dimen/short_interval"
+            android:text='@{"正确答案："+item.rightAnswer}'
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_margin="@dimen/short_interval"
+            android:textColor="@color/white"
+            android:id="@+id/analysis_seek"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_analysis"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

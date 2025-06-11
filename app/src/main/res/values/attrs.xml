@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="circleProgressBar">
+        <attr name="newCircleColor" format="color" />
+        <attr name="newCircleProgressColor" format="color" />
+        <attr name="newCircleWidth" format="dimension" />
+        <attr name="newTextColor" format="color" />
+        <attr name="newTextSize" format="dimension" />
+        <attr name="newMax" format="integer" />
+        <attr name="newTextIsDisplayable" format="boolean" />
+        <attr name="newCircleMargin" format="dimension" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.iyuba.toelflistening",
+  "variantName": "huaweiRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 337,
+      "versionName": "3.7.2450",
+      "outputFile": "托福听力-release-3.7.2450-337-2024-12-25.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/托福听力-release-3.7.2450-337-2024-12-25.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/托福听力-release-3.7.2450-337-2024-12-25.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 21
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ModifyUserHeadActivity"
+        android:orientation="vertical">
+
+        <include layout="@layout/standard_title" />
+
+        <RelativeLayout
+            android:padding="@dimen/short_interval"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/now_head"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/todo" />
+
+            <Button
+                android:id="@+id/finish_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/modify_head"
+                android:text="@string/finish_choose"
+                android:textColor="@color/black"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <TextView
+            android:background="@color/modify_head"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/album_selection"
+            android:text="@string/album_selection"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/short_interval"
+            android:layout_marginTop="@dimen/short_interval"
+            android:layout_marginEnd="@dimen/layout_constraint_height"
+            android:layout_marginStart="@dimen/layout_constraint_height"
+            android:backgroundTint="@color/modify_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/photograph"
+            android:text="@string/photograph"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/short_interval"
+            android:layout_marginTop="@dimen/short_interval"
+            android:layout_marginEnd="@dimen/layout_constraint_height"
+            android:layout_marginStart="@dimen/layout_constraint_height"
+            android:backgroundTint="@color/modify_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

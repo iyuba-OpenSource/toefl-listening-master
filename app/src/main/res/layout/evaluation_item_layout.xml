@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.iyuba.toelflistening.bean.TextItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/short_interval"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/triangle"
+                android:gravity="center"
+                android:text="@{item.senIndex}"
+                android:textColor="@color/white"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.iyuba.toelflistening.utils.view.SelectableTextView
+                android:id="@+id/sentence_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.iyuba.toelflistening.utils.view.ControlVideoProgressView
+                    android:id="@+id/control_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/short_interval">
+
+                    <ImageView
+                        android:id="@+id/mike"
+                        android:layout_width="@dimen/evaluation_rang"
+                        android:layout_height="@dimen/evaluation_rang"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/standard_interval"
+                        android:layout_marginEnd="@dimen/standard_interval"
+                        android:background="@drawable/mike_grey"
+                        android:contentDescription="@string/todo" />
+
+                    <com.iyuba.toelflistening.utils.view.RoundProgressBar
+                        android:id="@+id/control_self"
+                        android:layout_width="@dimen/evaluation_rang"
+                        android:layout_height="@dimen/evaluation_rang"
+                        android:layout_marginStart="@dimen/short_interval"
+                        android:layout_marginTop="@dimen/short_interval"
+                        android:layout_marginEnd="@dimen/short_interval"
+                        android:layout_marginBottom="@dimen/short_interval"
+                        android:layout_toEndOf="@id/mike"
+                        android:background="@drawable/play_evaluation"
+                        android:contentDescription="@string/todo"
+                        android:gravity="center"
+                        android:visibility="@{item.success ? View.VISIBLE : View.GONE}"
+                        app:newCircleColor="#fff"
+                        app:newCircleProgressColor="#05A4EB"
+                        app:newCircleWidth="2dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/evaluation_rang"
+                        android:layout_height="@dimen/evaluation_rang"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/standard_interval"
+                        android:layout_marginEnd="@dimen/standard_interval"
+                        android:layout_toEndOf="@id/control_self"
+                        android:background="@drawable/round_border"
+                        android:gravity="center"
+                        android:text="@{item.fraction}"
+                        android:visibility="@{item.success ? View.VISIBLE : View.GONE}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/release_item"
+                    android:layout_width="@dimen/evaluation_rang"
+                    android:layout_height="@dimen/evaluation_rang"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/release"
+                    android:visibility="@{item.success ? View.VISIBLE : View.GONE}" />
+                <!--
+                                  飞雷神标记
+                    android:visibility="@{item.success ? View.VISIBLE : View.GONE}"
+                -->
+                <TextView
+                    android:id="@+id/correct_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/correct_sound"
+                    android:textColor="@color/modify_head"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

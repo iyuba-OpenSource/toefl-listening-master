@@ -1,0 +1,134 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ToelfListen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_500</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="aaaaaaaaaaa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#000000</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="QuestionStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="HorizontalMargin">
+        <item name="android:layout_marginStart">@dimen/standard_interval</item>
+        <item name="android:layout_marginEnd">@dimen/standard_interval</item>
+    </style>
+
+    <style name="VerticalMargin">
+        <item name="android:layout_marginTop">@dimen/short_interval</item>
+        <item name="android:layout_marginBottom">@dimen/short_interval</item>
+    </style>
+
+    <style name="StandardMargin">
+        <item name="android:layout_margin">@dimen/standard_interval</item>
+    </style>
+
+    <dimen name="standard_interval">10dp</dimen>
+    <dimen name="standard_interval_big">50dp</dimen>
+    <dimen name="short_interval">5dp</dimen>
+
+    <style name="Widget.Magic.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.Magic.TextInputLayout.HintText</item>
+        <item name="android:textColorHint">@color/text_gray</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_margin">@dimen/standard_interval</item>
+    </style>
+
+    <style name="TextAppearance.Magic.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="login_style">
+        <item name="android:layout_marginBottom">@dimen/short_interval</item>
+        <item name="android:layout_marginTop">@dimen/short_interval</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+    <style name="pay_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/standard_text_size</item>
+    </style>
+
+    <dimen name="standard_text_size">18sp</dimen>
+    <dimen name="evaluation_rang">32dp</dimen>
+    <dimen name="layout_constraint_height">100dp</dimen>
+    <dimen name="img_size">80dp</dimen>
+
+    <style name="ToolbarTheme" parent="Widget.AppCompat.Toolbar">
+
+    </style>
+
+    <style name="ToolbarTitle" parent="Widget.AppCompat.Toolbar">
+
+    </style>
+
+    <style name="ProgressPrimary" parent="Widget.AppCompat.ProgressBar">
+
+    </style>
+
+    <dimen name="standard_text">18sp</dimen>
+    <dimen name="big_interval">30dp</dimen>
+
+    <style name="head_style">
+        <item name="android:layout_width">76dp</item>
+        <item name="android:layout_height">76dp</item>
+    </style>
+
+    <style name="fine_listen_img_style">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+
+    <dimen name="dialog_interval">15dp</dimen>
+
+
+    <style name="wxLoginTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="Theme.WELCOME" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
+
+        <!--        <item name="android:windowBackground">@drawable/bt_welcome</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+
+    </style>
+</resources>

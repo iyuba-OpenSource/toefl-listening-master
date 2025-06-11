@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="nowUserName"
+            type="String" />
+        <variable
+            name="loginBean"
+            type="com.iyuba.toelflistening.bean.LoginBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/standard_title" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            style="@style/login_style"
+            android:gravity="center"
+            android:text="@{nowUserName}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/login_style"
+            android:gravity="center"
+            android:text="@string/safekeeping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/login_style"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@string/safe_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/login_style"
+            android:gravity="center"
+            android:text="@string/identity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_modify_username"
+            style="@style/Widget.Magic.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="@string/hint_password"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/lock">
+            <!--        6-12-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_modify_username"
+                style="@style/login_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:text="@={loginBean.password}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verify_password"
+            style="@style/login_style"
+            android:text="@string/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/forgot_modify_username"
+            style="@style/login_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/forgot_password"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>

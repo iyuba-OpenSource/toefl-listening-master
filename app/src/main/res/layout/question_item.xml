@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.iyuba.toelflistening.bean.QuestionItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_interval"
+        android:layout_marginTop="@dimen/standard_interval"
+        android:layout_marginEnd="@dimen/big_interval"
+        app:cardCornerRadius="@dimen/standard_interval"
+        app:cardElevation="@dimen/standard_interval">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/standard_interval">
+
+            <ImageView
+                android:id="@+id/question_img"
+                loadUrl="@{item.realImg}"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:padding="5dp"
+                android:text="@{item.titleName}"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

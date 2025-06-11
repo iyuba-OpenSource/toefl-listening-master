@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.iyuba.toelflistening.bean.RankInfoItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/short_interval">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            loadUrl="@{item.headUrl}"
+            android:id="@+id/eval_info_head"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_size"
+            android:layout_toEndOf="@id/eval_info_head">
+            <TextView
+                android:id="@+id/eval_info_name"
+                android:gravity="center_vertical"
+                android:text="@{item.username}"
+                app:layout_constraintBottom_toBottomOf="@id/guideline12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginStart="@dimen/standard_interval"
+                android:id="@+id/evaluation_type"
+                android:padding="@dimen/short_interval"
+                android:text="@{item.realType}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/eval_info_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/guideline12"/>
+            <TextView
+                android:id="@+id/like_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/standard_interval"
+                android:gravity="center_vertical"
+                android:text="@{String.valueOf(item.agreeCount)}"
+                app:drawableLeftCompat="@drawable/awesome"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap" />
+            <ImageView
+                android:id="@+id/play_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/video"
+                app:layout_constraintTop_toTopOf="@id/guideline12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/standard_interval"
+            android:layout_marginBottom="@dimen/standard_interval"
+            android:textStyle="bold"
+            android:id="@+id/eval_info_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eval_info_head"
+            android:text="@{item.sentenceZh}" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_below="@id/eval_info_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="@{item.createDate}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RelativeOverlap" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginEnd="@dimen/standard_interval"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{item.realScore}" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

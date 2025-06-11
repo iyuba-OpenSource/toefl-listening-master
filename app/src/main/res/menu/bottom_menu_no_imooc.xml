@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/toefl"
+        android:icon="@drawable/toefl"
+        android:title="@string/toefl" />
+
+
+    <item
+        android:id="@+id/break_through"
+        android:icon="@drawable/icon_break_through"
+        android:title="@string/break_through" />
+
+    <item
+        android:id="@+id/small_video"
+        android:icon="@drawable/small_video"
+        android:title="@string/small_video" />
+    <item
+        android:id="@+id/mine"
+        android:icon="@drawable/mine"
+        android:title="@string/mine" />
+</menu>

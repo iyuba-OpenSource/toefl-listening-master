@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">托福听力</string>
+    <string name="todo">TODO</string>
+
+
+    <string name="break_through">闯关</string>
+    <string name="mine">我的</string>
+    <string name="toefl">托福</string>
+    <string name="small_video">视频</string>
+    <string name="loading">loading…</string>
+    <string name="privacy">隐私协议</string>
+    <string name="terms_use">使用条款</string>
+    <string name="login_register">登录/注册</string>
+    <string name="protocol_policy_long_long">    感谢您对本公司的支持!本公司非常重视您的个人信息和隐私保护。
+                    为了更好地保障您的个人权益，在您使用我们的产品前，
+                    请务必审慎阅读《隐私政策》和《用户协议》内的所有条款，
+                    尤其是:\n
+                     1.我们对您的个人信息的收集/保存/使用/对外提供/保护等规则条款，以及您的用户权利等条款;\n
+                     2.为了更方便您使用我们的软件，我们回根据您使用的具体功能时申请必要的权限，如摄像头，存储权限，录音权限等;\n
+                     3.在使用过程中会收集必要的设备MAC地址、IMEI、Android ID以及传感器;\n
+                     4.约定我们的限制责任、免责条款;\n
+                     5.其他以颜色或加粗进行标识的重要条款。\n
+                    您点击“同意并继续”的行为即表示您已阅读完毕并同意以上协议的全部内容。
+                    如您同意以上协议内容，请点击“同意”，开始使用我们的产品和服务!</string>
+    <string name="protocol_policy">用户协议与隐私政策</string>
+    <string name="agree">同意</string>
+    <string name="not_agree">不同意退出应用</string>
+    <string name="verify_result">查看成绩</string>
+    <string name="view_analysis">查看解析</string>
+    <string name="login">登  录</string>
+    <string name="exit">退出登录</string>
+    <string name="input_some">输入手机号/用户名/邮箱</string>
+    <string name="input_password">请输入密码</string>
+    <string name="register">注册账号</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="input_phone">输入手机号</string>
+    <string name="read_agree">我已阅读并同意《用户隐私协议》</string>
+    <string name="send_verify_code">发送验证码</string>
+    <string name="input_verify_code">输入验证码</string>
+    <string name="password_hint">输入密码(6–15个英文、数字)</string>
+    <string name="username_hint">输入用户名(3–15个字符)</string>
+    <string-array name="speed">
+        <item>倍速0.5x</item>
+        <item>倍速1.0x</item>
+        <item>倍速1.5x</item>
+        <item>倍速2.0x</item>
+    </string-array>
+    <string name="um_key">5704730be0f55af84900063a</string>
+    <string name="static_phone_receiver">com.iyuba.toelflistening.phone.receiver</string>
+    <string name="um_um_key">um.5704730be0f55af84900063a</string>
+    <string name="wonderful_sentence">例句</string>
+    <string name="vip_describe">1.可以调速\n2.免费查看解析\n3.本应用VIP仅限Android端当前应用使用\n4.无限制评测句子\n5.无限制保存视频到手机相册</string>
+    <string name="vip_permission">VIP权限说明</string>
+    <string name="current_vip">本应用VIP</string>
+    <string name="activate_now">立即开通</string>
+    <string name="welcome">欢迎您:</string>
+    <string name="order">订单:</string>
+    <string name="pay_china_dollar">需要支付人民币：</string>
+    <string name="choose_pay_way">选择支付方式</string>
+    <string name="verify_pay">确认支付</string>
+    <string name="zfb_desc">支付宝支付\n推荐支付宝账号的用户使用</string>
+    <string name="safekeeping">用户名是账号的唯一凭证，请妥善保管</string>
+    <string name="safe_verify">安全验证</string>
+    <string name="identity">请填写当前用户名密码，验证本人身份后才能注销用户</string>
+    <string name="logout">注销账号</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="correct_sound">点击纠音</string>
+    <string name="mine_rank">我的排行</string>
+    <string name="sum_rank">总排行</string>
+    <string name="finish_choose">完成</string>
+    <string name="album_selection">相册选取</string>
+    <string name="photograph">拍照</string>
+    <string name="share">分享</string>
+    <string name="listen">听</string>
+    <string name="delete">删除</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="submit">提交</string>
+    <string name="generate_hint">下方已为您生成了默认的用户名和密码</string>
+    <string name="default_username">默认用户名为：</string>
+    <string name="default_password">默认密码为：</string>
+    <string name="modify_hint">为了您的账号安全，建议修改用户名和密码后再提交</string>
+
+    <!--    个人中心模块的FileProvider的Authority-->
+    <string name="file_provider_name_personal">com.iyuba.toelflistening</string>
+    <string name="confirm_personal">确定</string>
+    <string name="ok_personal">确定</string>
+    <string name="cancel_personal">取消</string>
+    <string name="micro_lesson">微课</string>
+    <string name="promotion" translatable="false">推广</string>
+    <string name="hint">提示</string>
+    <string name="alert_personal">提示</string>
+    <string-array name="vip_desc_array">
+        <item>本应用VIP\n(不含微课)</item>
+        <item>全站VIP\n(不含微课)</item>
+        <item>黄金VIP\n(全部微课)</item>
+    </string-array>
+    <string name="all_vip_describe">全站会员可享受Android端、IOS端、网页端、电脑桌面端的全端会员权利</string>
+    <string name="gold_vip_describe">1. 微课模块: VOA英语Lisa博士、Rachel美语发音；新概念英语全4册；四六级名师陈苏灵、李尚龙、石雷鹏、尹延、章敏等；托福、雅思、考研、学位英语、中职英语等名师讲解所有课程全部免费学习；\n2.尊享爱语吧旗下全站会员特权。</string>
+    <string name="find">发现</string>
+    <string name="buy_currency">购买爱语币</string>
+    <string name="buy_currency_desc">（爱语币仅用于购买微课，可永久使用）</string>
+    <string name="buy_now">立即购买</string>
+    <string name="vip">会员</string>
+    <string name="sign_in">打卡</string>
+    <string name="sign">@string/sign_in</string>
+    <string name="sign_desc2">您在爱语吧坚持学习</string>
+    <string name="sign_desc3">天天学习，每日红包！</string>
+    <string name="sign_desc">爱语吧·出品</string>
+    <string name="empty_data">暂无数据</string>
+    <string name="default_time">00:00</string>
+    <string name="synthesis">合成</string>
+    <string name="skip">跳过</string>
+    <string name="redo">重做</string>
+    <string name="pronunciation_analysis">发音解析</string>
+    <string name="seek_analysis">点击每个单词可查看发音解析</string>
+    <string name="correct_pronunciation">正确发音:</string>
+    <string name="your_pronunciation">你的发音:</string>
+    <string name="word_definition">单词释义:</string>
+    <string name="read_word_again">再试着跟读一遍这个单词吧</string>
+    <string name="listen_original">听原音</string>
+    <string name="click_start">点击开始</string>
+    <string name="seek_lisa" translatable="false">查看发音专家Lisa博士对于发音的视频讲解</string>
+    <string name="click_stop">点击结束</string>
+    <string name="qq_key">mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

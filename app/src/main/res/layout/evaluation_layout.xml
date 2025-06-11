@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/evaluation_list"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/evaluation_item_layout"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="@string/default_time"
+                android:id="@+id/now_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:id="@+id/evaluation_seek"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/default_time"
+                android:id="@+id/sum_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginStart="@dimen/standard_interval"
+                android:layout_marginEnd="@dimen/standard_interval"
+                android:text="@string/synthesis"
+                android:id="@+id/synthesis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                tools:visibility="visible"
+                android:visibility="invisible"
+                android:id="@+id/merge_layout"
+                android:layout_margin="@dimen/short_interval"
+                android:background="@drawable/border_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/control_merge"
+                    style="@style/fine_listen_img_style"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/standard_interval"
+                    android:layout_marginEnd="@dimen/standard_interval"
+                    android:background="@drawable/play_evaluation_old"
+                    android:contentDescription="@string/todo" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/synthesis_score"
+                    android:layout_width="@dimen/evaluation_rang"
+                    android:layout_height="@dimen/evaluation_rang"
+                    android:layout_marginStart="@dimen/short_interval"
+                    android:layout_marginTop="@dimen/short_interval"
+                    android:layout_marginEnd="@dimen/short_interval"
+                    android:layout_marginBottom="@dimen/short_interval"
+                    android:layout_toEndOf="@id/control_merge"
+                    android:background="@drawable/round_border"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/release"
+                    android:layout_width="@dimen/evaluation_rang"
+                    android:layout_height="@dimen/evaluation_rang"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/standard_interval"
+                    android:layout_marginEnd="@dimen/standard_interval"
+                    android:layout_toEndOf="@id/synthesis_score"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/release_merge" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

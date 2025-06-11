@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="payChinaDollar"
+            type="String" />
+
+        <variable
+            name="order"
+            type="String" />
+
+        <variable
+            name="welcome"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/standard_title" />
+
+        <LinearLayout
+            style="@style/StandardMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="2"
+                android:text="@string/welcome"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="3"
+                android:text="@{welcome}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/StandardMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="2"
+                android:text="@string/order"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="3"
+                android:text="@{order}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/StandardMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="2"
+                android:text="@string/pay_china_dollar"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                style="@style/pay_text_style"
+                android:layout_weight="3"
+                android:text="@{payChinaDollar}" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TextView
+            style="@style/login_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_pay_way"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <RadioGroup
+            style="@style/login_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/zfb_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableStart="@drawable/zfb_logo"
+                android:text="@string/zfb_desc" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/pay_tv_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="《会员服务协议》"
+            android:textColor="?colorPrimary"
+            android:textSize="16sp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verify_pay"
+            style="@style/login_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/verify_pay" />
+    </LinearLayout>
+</layout>

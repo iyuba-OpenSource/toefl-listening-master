@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.iyuba.toelflistening.bean.BuyCurrency" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/short_interval">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            loadLocal="@{item.image}"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginStart="@dimen/standard_interval"
+            android:text='@{"￥"+String.valueOf(item.price)}'
+            android:textSize="@dimen/standard_text"
+            android:textColor="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:padding="3dp"
+            android:id="@+id/buy_now"
+            android:layout_marginStart="@dimen/standard_interval"
+            android:textColor="@color/white"
+            android:background="#E87111"
+            android:text="@string/buy_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
